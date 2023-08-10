@@ -3,4 +3,6 @@ ${BUILT_PRODUCTS_DIR}/KMPNativeCoroutinesAsync/KMPNativeCoroutinesAsync.framewor
 ${BUILT_PRODUCTS_DIR}/KMPNativeCoroutinesCombine/KMPNativeCoroutinesCombine.framework
 ${BUILT_PRODUCTS_DIR}/KMPNativeCoroutinesCore/KMPNativeCoroutinesCore.framework
 ${BUILT_PRODUCTS_DIR}/KMPNativeCoroutinesRxSwift/KMPNativeCoroutinesRxSwift.framework
+${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
 ${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework
+${PODS_ROOT}/../../shared/build/cocoapods/framework/shared.framework

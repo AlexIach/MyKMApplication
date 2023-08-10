@@ -10,6 +10,8 @@
 		058557BB273AAA24004C7B11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557BA273AAA24004C7B11 /* Assets.xcassets */; };
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		061C8ADF2A8397FC00EC51E9 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061C8ADE2A8397FC00EC51E9 /* MainViewModel.swift */; };
+		0638AA382A84F5960078BFF4 /* BreedsGridUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0638AA372A84F5960078BFF4 /* BreedsGridUIView.swift */; };
+		0638AA3A2A84F60E0078BFF4 /* BreedUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0638AA392A84F60E0078BFF4 /* BreedUIView.swift */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
 		DC7CF5AA727C87B4F655CE0F /* Pods_iosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E030583D16DEB866B3F9E33 /* Pods_iosApp.framework */; };
@@ -32,6 +34,8 @@
 		058557BA273AAA24004C7B11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		061C8ADE2A8397FC00EC51E9 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		0638AA372A84F5960078BFF4 /* BreedsGridUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsGridUIView.swift; sourceTree = "<group>"; };
+		0638AA392A84F60E0078BFF4 /* BreedUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedUIView.swift; sourceTree = "<group>"; };
 		1E030583D16DEB866B3F9E33 /* Pods_iosApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2152FB032600AC8F00CF470E /* iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSApp.swift; sourceTree = "<group>"; };
 		69D20F181C15C688DB6F7BDD /* Pods-iosApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosApp.release.xcconfig"; path = "Target Support Files/Pods-iosApp/Pods-iosApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
 				061C8ADE2A8397FC00EC51E9 /* MainViewModel.swift */,
+				0638AA372A84F5960078BFF4 /* BreedsGridUIView.swift */,
+				0638AA392A84F60E0078BFF4 /* BreedUIView.swift */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -243,6 +249,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
+				0638AA3A2A84F60E0078BFF4 /* BreedUIView.swift in Sources */,
+				0638AA382A84F5960078BFF4 /* BreedsGridUIView.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 				061C8ADF2A8397FC00EC51E9 /* MainViewModel.swift in Sources */,
 			);
@@ -302,7 +310,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -357,7 +365,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -376,9 +384,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
 					"${PODS_CONFIGURATION_BUILD_DIR}/**",
+					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = iosApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,9 +414,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
+					"${PODS_CONFIGURATION_BUILD_DIR}/**",
 					"$(inherited)",
 					"$(SRCROOT)/../shared/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
-					"${PODS_CONFIGURATION_BUILD_DIR}/**",
 				);
 				INFOPLIST_FILE = iosApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

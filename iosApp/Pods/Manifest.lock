@@ -1,4 +1,5 @@
 PODS:
+  - Kingfisher (7.9.0)
   - KMPNativeCoroutinesAsync (1.0.0-ALPHA-10):
     - KMPNativeCoroutinesCore (= 1.0.0-ALPHA-10)
   - KMPNativeCoroutinesCombine (1.0.0-ALPHA-10):
@@ -8,27 +9,37 @@ PODS:
     - KMPNativeCoroutinesCore (= 1.0.0-ALPHA-10)
     - RxSwift (~> 6.0)
   - RxSwift (6.5.0)
+  - shared (1.0)
 
 DEPENDENCIES:
+  - Kingfisher
   - KMPNativeCoroutinesAsync (= 1.0.0-ALPHA-10)
   - KMPNativeCoroutinesCombine (= 1.0.0-ALPHA-10)
   - KMPNativeCoroutinesRxSwift (= 1.0.0-ALPHA-10)
+  - shared (from `../shared`)
 
 SPEC REPOS:
   trunk:
+    - Kingfisher
     - KMPNativeCoroutinesAsync
     - KMPNativeCoroutinesCombine
     - KMPNativeCoroutinesCore
     - KMPNativeCoroutinesRxSwift
     - RxSwift
 
+EXTERNAL SOURCES:
+  shared:
+    :path: "../shared"
+
 SPEC CHECKSUMS:
+  Kingfisher: 59f908b6d2f403b0a3e539debb0eec05cb27002c
   KMPNativeCoroutinesAsync: c941aeffc6fef5ab52fa6448221d130c050a9574
   KMPNativeCoroutinesCombine: aba1388c87a7ad95ca167ef033a487d83da428d6
   KMPNativeCoroutinesCore: 826573240f36e70f257c5215acab10a72b05ba82
   KMPNativeCoroutinesRxSwift: 7888481e7c1cd0b94d6c16a0e0fd59dd324aa8cc
   RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  shared: 6c9a2b105a9fd546679ce006cf091017ca5542f4
 
-PODFILE CHECKSUM: fff7d74303b7a5aef06e58bca656d0d9f10c3fb5
+PODFILE CHECKSUM: 2ce62105ba13e1bba9c15cab6561b9d970d7741a
 
 COCOAPODS: 1.12.1
