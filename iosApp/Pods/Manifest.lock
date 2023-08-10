@@ -1,0 +1,34 @@
+PODS:
+  - KMPNativeCoroutinesAsync (1.0.0-ALPHA-10):
+    - KMPNativeCoroutinesCore (= 1.0.0-ALPHA-10)
+  - KMPNativeCoroutinesCombine (1.0.0-ALPHA-10):
+    - KMPNativeCoroutinesCore (= 1.0.0-ALPHA-10)
+  - KMPNativeCoroutinesCore (1.0.0-ALPHA-10)
+  - KMPNativeCoroutinesRxSwift (1.0.0-ALPHA-10):
+    - KMPNativeCoroutinesCore (= 1.0.0-ALPHA-10)
+    - RxSwift (~> 6.0)
+  - RxSwift (6.5.0)
+
+DEPENDENCIES:
+  - KMPNativeCoroutinesAsync (= 1.0.0-ALPHA-10)
+  - KMPNativeCoroutinesCombine (= 1.0.0-ALPHA-10)
+  - KMPNativeCoroutinesRxSwift (= 1.0.0-ALPHA-10)
+
+SPEC REPOS:
+  trunk:
+    - KMPNativeCoroutinesAsync
+    - KMPNativeCoroutinesCombine
+    - KMPNativeCoroutinesCore
+    - KMPNativeCoroutinesRxSwift
+    - RxSwift
+
+SPEC CHECKSUMS:
+  KMPNativeCoroutinesAsync: c941aeffc6fef5ab52fa6448221d130c050a9574
+  KMPNativeCoroutinesCombine: aba1388c87a7ad95ca167ef033a487d83da428d6
+  KMPNativeCoroutinesCore: 826573240f36e70f257c5215acab10a72b05ba82
+  KMPNativeCoroutinesRxSwift: 7888481e7c1cd0b94d6c16a0e0fd59dd324aa8cc
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+
+PODFILE CHECKSUM: fff7d74303b7a5aef06e58bca656d0d9f10c3fb5
+
+COCOAPODS: 1.12.1
