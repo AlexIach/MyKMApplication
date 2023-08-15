@@ -7,10 +7,12 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainActivity : ComponentActivity() {
 
+    // Injecting MainViewModel into Activity component using viewModel() delegate
     private val viewModel by viewModel<MainViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Compose UI setup
         setContent {
             MyApplicationTheme {
                 MainScreen(viewModel)

@@ -4,7 +4,6 @@ import com.alex.iachimov.mykmapplication.api.model.BreedImageResponse
 import com.alex.iachimov.mykmapplication.api.model.BreedsResponse
 import io.ktor.client.call.body
 import io.ktor.client.request.*
-import io.ktor.client.utils.EmptyContent.contentType
 import io.ktor.http.ContentType
 import io.ktor.http.contentType
 
@@ -13,13 +12,21 @@ import io.ktor.http.contentType
  */
 internal class BreedsApi : KtorApi() {
 
-    suspend fun getBreeds(): BreedsResponse = client.get {
-        contentType(ContentType.Application.Json)
-        apiUrl("breeds/list")
-    }.body()
+    /**
+     * HTTP GET request to get list of available breeds
+     */
+    suspend fun getBreeds(): BreedsResponse =
+        client.get { // Executes an HttpClient's GET request with the parameters configured in block.
+            contentType(ContentType.Application.Json) // Set Content-Type header
+            apiUrl("breeds/list") // Configure API details
+        }.body() // Receive response payload
 
-    suspend fun getRandomBreedImageFor(breed: String): BreedImageResponse = client.get {
-        contentType(ContentType.Application.Json)
-        apiUrl("breed/$breed/images/random")
-    }.body()
+    /**
+     * HTTP GET request to get link to a random image for specified breed
+     */
+    suspend fun getRandomBreedImageFor(breed: String): BreedImageResponse =
+        client.get { // Executes an HttpClient's GET request with the parameters configured in block.
+            contentType(ContentType.Application.Json) // Set Content-Type header
+            apiUrl("breed/$breed/images/random") // Configure API details
+        }.body() // Receive response payload
 }

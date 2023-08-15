@@ -1,8 +1,10 @@
 package com.alex.iachimov.mykmapplication.util
 
-import com.alex.iachimov.mykmapplication.util.DispatcherProvider
 import kotlinx.coroutines.Dispatchers
 
+/**
+ * Adding 'actual' declaration for getDispatcherProvider() that returns actual AndroidDispatcher implementation
+ */
 internal actual fun getDispatcherProvider(): DispatcherProvider = AndroidDispatcherProvider()
 
 private class AndroidDispatcherProvider: DispatcherProvider{

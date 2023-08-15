@@ -6,10 +6,17 @@ import com.rickclephas.kmp.nativecoroutines.NativeCoroutines
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
+/**
+ * Used to trigger scenario when user wants to get refreshed list of breeds from API
+ */
 class FetchBreedsUseCase : KoinComponent {
 
+    // Injecting BreedsRepository
     private val breedsRepository: BreedsRepository by inject()
 
+    /**
+     * Adding keyword 'operator' to method called "invoke" we can call instance of ToggleFavouriteStateUseCase as function
+     */
     @NativeCoroutines
     suspend operator fun invoke(): List<Breed> = breedsRepository.fetch()
 }

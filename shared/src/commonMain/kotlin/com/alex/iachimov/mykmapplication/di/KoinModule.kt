@@ -15,7 +15,9 @@ import org.koin.dsl.KoinAppDeclaration
 import org.koin.dsl.module
 
 private val utilityModule = module {
+    // Create instance of DispatcherProvider everytime when it's injected
     factory { getDispatcherProvider() }
+    // Create single instance of object to share it between different parts of the app
     single { DogifyDatabase(createDriver("dogify.db")) }
 }
 
@@ -36,8 +38,11 @@ private val usecaseModule = module {
     factory { ToggleFavouriteStateUseCase() }
 }
 
+// Combine modules we want to share
 private val sharedModules = listOf(usecaseModule, repositoryModule, apiModule, utilityModule)
 
+// Setup Koin modules and init Koin
+// initKoin is called from main Application class
 fun initKoin(appDeclaration: KoinAppDeclaration = {}) = startKoin {
     appDeclaration()
     modules(sharedModules)

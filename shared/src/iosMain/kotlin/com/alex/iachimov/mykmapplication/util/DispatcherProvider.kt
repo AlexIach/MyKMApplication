@@ -2,6 +2,9 @@ package com.alex.iachimov.mykmapplication.util
 
 import kotlinx.coroutines.Dispatchers
 
+/**
+ * Adding 'actual' declaration for getDispatcherProvider() that returns actual iOSDispatcher implementation
+ */
 internal actual fun getDispatcherProvider(): DispatcherProvider = IosDispatcherProvider()
 
 private class IosDispatcherProvider : DispatcherProvider {

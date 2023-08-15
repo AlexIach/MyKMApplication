@@ -13,16 +13,27 @@ import kotlinx.serialization.json.Json
 
 internal abstract class KtorApi {
 
+    /**
+     * Json serialization configuration
+     */
     private val jsonConfiguration = Json {
         prettyPrint = true
         ignoreUnknownKeys = true
     }
 
+    /**
+     * HTTP client configuration.
+     * Under the hood Ktor is using 2 different HttpClientEngine. The 1st one for Android and the2nd one for iOS.
+     * That's why we had to add 2 different dependencies under iOS and Android source-sets in build.gradle.kts file
+     */
     val client = HttpClient {
         install(ContentNegotiation) {
             json(jsonConfiguration)
         }
 
+        /**
+         * Setup logging
+         */
         install(Logging) {
             logger = Logger.SIMPLE
             level = LogLevel.ALL
@@ -30,7 +41,7 @@ internal abstract class KtorApi {
     }
 
     /**
-     * Use this method for configuring the request url
+     * Configure API details
      */
     fun HttpRequestBuilder.apiUrl(path: String) {
         url {
