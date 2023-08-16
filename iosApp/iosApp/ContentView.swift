@@ -2,16 +2,23 @@ import SwiftUI
 import shared
 
 struct ContentView: View {
-    
+    /**
+     * Create binding between SwiftUI and an instance of a class that conforms to the ObservableObject protocol --> MainViewModel
+     */
     @ObservedObject private var viewModel: MainViewModel
 
+    /**
+     * Koin initialization. Init everything we provided in KoinModule
+     */
     init() {
         KoinModuleKt.doInitKoin()
         viewModel = MainViewModel.init()
     }
 
+    // Create property that conforms View protocol
     var body: some View {
-        VStack{
+        // Arrange chikds vertically
+        VStack {
             Toggle("Filter favourites", isOn: $viewModel.shouldFilterFavourites)
                 .padding(16)
 
@@ -20,7 +27,9 @@ struct ContentView: View {
                 .frame(alignment: .center)
                 .padding(.bottom, 16)
 
-            ZStack{
+            // Handling different UI states
+            // Arrange childs in a stack, overlaying them on top of each other
+            ZStack {
                 switch viewModel.state {
                 case MainViewModel.State.LOADING:
                     ProgressView().frame(alignment:.center)
@@ -33,16 +42,12 @@ struct ContentView: View {
                     Text("Ooops looks like there are no breeds")
                         .frame(alignment: .center)
                         .font(.headline)
-
                 case MainViewModel.State.ERROR:
                    Text("Ooops something went wrong...")
                         .frame(alignment: .center)
                         .font(.headline)
                 }
-
             }
-
         }
-
     }
 }

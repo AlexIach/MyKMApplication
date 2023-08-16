@@ -16,12 +16,15 @@ struct BreedUIView: View {
   var onFavouriteTapped: (Breed) -> Void = {_ in }
 
   var body: some View {
+      // Arrange views vertically
       VStack {
+          // Using view from Kingfisher dependency as image loading view
           KFImage(URL(string: breed.imageUrl))
               .resizable()
               .scaledToFit()
               .cornerRadius(16)
 
+          // Arrange views horizontally
           HStack {
               Text(breed.name).padding(16)
               Spacer()

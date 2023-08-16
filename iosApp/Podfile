@@ -9,7 +9,7 @@ target 'iosApp' do
   pod 'KMPNativeCoroutinesAsync', '1.0.0-ALPHA-10'    # Swift Concurrency implementation
   pod 'KMPNativeCoroutinesCombine', '1.0.0-ALPHA-10'  # Combine implementation
   pod 'KMPNativeCoroutinesRxSwift', '1.0.0-ALPHA-10'  # RxSwift implementation
-  pod 'shared', :path => '../shared'
-  pod 'Kingfisher'
+  pod 'Kingfisher'                                    # Image loading
+  pod 'shared', :path => '../shared'                  # Adding development pod, that contains shared framework
 
 end
